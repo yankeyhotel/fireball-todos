@@ -11,3 +11,4 @@ less
 underscore
 momentjs:moment
 iron:router
+sacha:spin
