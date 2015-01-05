@@ -1,0 +1,810 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"location",
+				"location-descr-hldr"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"gold",
+				"gold-light"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"marin",
+				"margin-bottom"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"tab",
+				"table-row"
+			],
+			[
+				"table-",
+				"table-cell"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"border-right-",
+				"border-right-width"
+			],
+			[
+				"border-top-",
+				"border-top-width"
+			],
+			[
+				"gray-",
+				"gray-dark"
+			],
+			[
+				"red-",
+				"red-light"
+			],
+			[
+				"script",
+				"script-headline"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"gra",
+				"gray-light"
+			],
+			[
+				"gray-dark",
+				"gray-dark"
+			],
+			[
+				"scr",
+				"screen-sm"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"blue-",
+				"blue-dark"
+			],
+			[
+				"margn",
+				"margin-bottom"
+			],
+			[
+				"account-my",
+				"account-my-affiliates"
+			],
+			[
+				"account-m",
+				"account-my-orders"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "client/templates/todos/todo_list.html",
+			"settings":
+			{
+				"buffer_size": 117,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/templates/todos/todo_list.js",
+			"settings":
+			{
+				"buffer_size": 235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/templates/todos/todo_item.html",
+			"settings":
+			{
+				"buffer_size": 164,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 368.0,
+		"selected_items":
+		[
+			[
+				"packac",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 543.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos",
+		"/Users/yankeyhotel/Sites_meteor/microscope",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/posts",
+		"/Users/yankeyhotel/Sites_meteor/microscope/server"
+	],
+	"file_history":
+	[
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/style.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/main.html",
+		"/Users/yankeyhotel/Sites_meteor/microscope/server/fixtures.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor/custom.bootstrap.json",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/main.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/vendor/custom.bootstrap.mixins.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/vendor/custom.bootstrap.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/vendor/custom.bootstrap.json",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/vendor/custom.bootstrap.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/sites/home.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/components/a_component.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball/client/views/users/users_nav.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball/client/views/users/users_nav.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball/server/fixtures.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball/server/publications.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball/README.md",
+		"/Users/yankeyhotel/Sites_meteor/fireball/smart.lock",
+		"/Users/yankeyhotel/Sites_meteor/fireball/smart.json",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_document-header.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_layout-typical.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/zz_builders/3rd_party_templates/transaction-wireless.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/locations.group/detail.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/zz_builders/3rd_party_templates/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/zz_builders/3rd_party_templates/survey.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/zz_builders/3rd_party_templates/location-detail.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/zz_builders/3rd_party_templates/assets/maps/map.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/locations.group/maps.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/styles-variables.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/styles.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/js/script.js",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/locations.group/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/config/config.master.php",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/config/config.rackdev.php",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/config/config.env.php",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/config/config.dev.php",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/pages.group/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/themes/third_party/wygwam_assets/my-styles.js",
+		"/Users/yankeyhotel/Sites/Maggianos.com/style-guide.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/styles-style-guide.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/menu.group/_sidebar.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/menu.group/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/menu.group/detail.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/stash_templates/stash_menu.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/low_variables/default_site/lv-reservations.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/low_variables/default_site/lv-code-banquets-ctas.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/banquets.group/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/locations.group/_location_events.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/banquets.group/detail.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/3rd-party-survey.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/bootstrap.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap-datetimepicker/src/less/bootstrap-datetimepicker.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/low_variables/default_site/lv-code-banquets-gallery-strip.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/low_variables/default_site/lv-code-gallery-strip.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/banquets.group/_ctas.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/banquets.group/_gallery-strip.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/low_variables/default_site/banquets-main-header-copy.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/xml/menu-tier-one.xml",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/xml/MaggMenu.xml",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/xml/MaggMenu.json",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_location-finder.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/glyphicons.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/delivery.group/index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/php/eventbrite.php",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/css/3rd-party-survey.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/js/script-map.js",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/variables.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/touch-imagelightbox/dist/touch-imagelightbox.css",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/touch-imagelightbox/dist/touch-imagelightbox.js",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/touch-imagelightbox.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/touch-imagelightbox/sass/_variables.scss",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/touch-imagelightbox/sass/touch-imagelightbox.scss",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/config/config.stage.php",
+		"/Users/yankeyhotel/Desktop/tier-one-pankaj.xml",
+		"/Users/yankeyhotel/Sites/Maggianos.com/cu-index.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/menus.xml",
+		"/Users/yankeyhotel/Sites/Maggianos.com/tier_test_menu.xml",
+		"/Users/yankeyhotel/Sites/Maggianos.com/tier_one_menu.xml",
+		"/Users/yankeyhotel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/variables.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/jquery.sidr.dark.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/config.codekit",
+		"/Users/yankeyhotel/Sites/Maggianos.com/justin-map.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/expressionengine/config/config.php",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/menu.group/appetizers.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/mixins-switch.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/mixins.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/bootstrap-style-guide.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/sitemap.xml",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_footer.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_header.html",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap-select/README.md",
+		"/Users/yankeyhotel/Desktop/menus.xml",
+		"/Users/yankeyhotel/Sites/Maggianos.com-wires/Site/assets/less/styles.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/forms.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/css/bootstrap.css",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap-select/bootstrap-select.min.css",
+		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/bootstrap.less",
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/js/app.js",
+		"/Volumes/Data/Switch Server/05.Switch Marketing/Events/Concert Series/10 2014 Concert Series/02 Bethan/email-6 Reschedule/email.html",
+		"/Users/yankeyhotel/Desktop/front-end-test-master/answers.js",
+		"/Users/yankeyhotel/Desktop/front-end-test-master/index.html",
+		"/Users/yankeyhotel/Desktop/front-end-test-master/spec/SpecHelper.js",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/_settings.scss",
+		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/foundation/scss/foundation/components/_buttons.scss",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/app.scss",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/js/app.js",
+		"/Users/yankeyhotel/Sites/MaggianosF/Gruntfile.js",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/js/circletype.js",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/layouts/default.html",
+		"/Users/yankeyhotel/Sites/MaggianosF/dist/assets/js/all.js",
+		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/foundation/js/foundation.js",
+		"/Users/yankeyhotel/Sites/MaggianosF/.bowerrc",
+		"/Users/yankeyhotel/Sites/MaggianosF/package.json",
+		"/Users/yankeyhotel/Sites/MaggianosF/bower.json",
+		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/letteringjs/jquery.lettering.js",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/pages/foundation.html",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/pages/style-guide.html",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/styles-variables.scss",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/styles.scss",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/_mixins-switch.scss",
+		"/Users/yankeyhotel/Sites/MaggianosF/README.md",
+		"/Users/yankeyhotel/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/yankeyhotel/Library/Application Support/Sublime Text 3/Packages/User/SCSS/section-comment",
+		"/Users/yankeyhotel/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/yankeyhotel/Sites/MaggianosF/src/pages/index.html",
+		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/foundation/scss/foundation/components/_type.scss"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"false",
+			"glen",
+			"@",
+			"locations-gallery/",
+			"/images/made/images/uploads/locations-gallery/1200x550_150_150_c1.gif",
+			"http://dev.maggianos.com/images/uploads/locations-gallery/1200x550.gif",
+			".text",
+			"pdfs",
+			"affix",
+			"name",
+			"menus_{menu_name}_table",
+			"carousel",
+			"{route=\"menu/detail\"",
+			"segment_5",
+			"body",
+			"myModal",
+			"15064",
+			"</option>",
+			"&nbsp;-",
+			"reservations",
+			"append",
+			"banquets",
+			".btn-default",
+			".banquets-intro",
+			"carousel",
+			".car",
+			".carousel",
+			"header-backgrounds",
+			".banquets-intro",
+			".carousel",
+			"Banquets ",
+			"location-finder",
+			"locaation-finder",
+			"{banquet_type}",
+			"location-finder",
+			"Banquets",
+			"banquets",
+			".location-finder-hldr",
+			"images",
+			"banquets-ctas",
+			"preload",
+			"ctas",
+			"gallery",
+			"locations-employees",
+			"basic",
+			"banquets",
+			"grid-gallery",
+			".btn",
+			"a",
+			"location-gallery",
+			"end_date",
+			"start_date",
+			"eventListRow",
+			"instance",
+			"quitImageLightbox",
+			"last",
+			";\n",
+			"First Name",
+			"required",
+			"text",
+			"required",
+			".check",
+			"white-space",
+			"textarea",
+			"form",
+			"Please tell us your order.",
+			".hero",
+			"footer",
+			"form",
+			".locations",
+			"delivery",
+			".location-hldr",
+			".location-finder",
+			"}\n",
+			"gallery",
+			"slider",
+			".background-cover",
+			"console",
+			"addMarkerToMap",
+			"#imagelightbox-loading",
+			"1500x1500",
+			"href",
+			"href=\"\"",
+			"</a>",
+			"<a href=\"\">",
+			"caps",
+			"lunch",
+			"menus_dinner_table",
+			"menus_featured_table",
+			"Test 2",
+			"Test 1",
+			"Featured",
+			"FeaturedMenu",
+			"Dinner",
+			"DinnerMenu",
+			"Featured",
+			"FeaturedMenu",
+			"Dinner",
+			"DinnerMenu",
+			"DesertMenu",
+			"FeaturedMenu",
+			"Dinner",
+			"DinnerMenu",
+			"Featured",
+			"FeaturedMenu",
+			"DinnerMenu",
+			"RowType",
+			"Beverage",
+			"Lunch",
+			"Dinner",
+			"Featured",
+			" ID=\"featured\" ",
+			"heading",
+			"”",
+			"dessert",
+			"Dessert",
+			"dessert",
+			"Dessert",
+			"dessert",
+			"Dessert",
+			"dessert",
+			"Dessert",
+			"dessert",
+			"beverage",
+			"Beverage",
+			"dinner",
+			"Dinner",
+			"title"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"true",
+			"./assets/img/locations-gallery/1200x550_150_150_c1.gif",
+			"../assets/img/locations-gallery/1200x550_150_150_c1.gif",
+			"/assets/img/locations-gallery/1200x550_150_150_c1.gif",
+			"assets/img/locations-gallery/1200x550_150_150_c1.gif",
+			"http://placehold.it/1200x550",
+			"{segment:banquet_name}",
+			"Test 3",
+			"Test 2",
+			"\"",
+			"title",
+			".serif-caps",
+			"cta-typical",
+			"",
+			"Extra Small",
+			">Extra Small",
+			"btn-black",
+			"btn-gray",
+			"btn-gold",
+			"btn-xs",
+			"btn-lg",
+			"btn-sm",
+			"btn-red",
+			"btn-large",
+			"btn",
+			"col-sm-4",
+			"col-sm-7",
+			"col-sm-5",
+			"col-sm-2",
+			"#gradient > .vertical",
+			"@",
+			"@line-height-base",
+			"@font-size-base",
+			"",
+			"@",
+			"8.3%"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "client/templates/todos/todo_list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/templates/todos/todo_list.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/templates/todos/todo_item.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								131,
+								131
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 52.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "fireball-todos.sublime-project",
+	"replace":
+	{
+		"height": 104.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"mag",
+				"~/Sites/Maggianos.com/maggianos.sublime-project"
+			],
+			[
+				"foot",
+				"~/Sites/FootCardigan_v5b/fc-v5b.sublime-project"
+			],
+			[
+				"fc",
+				"~/Sites/FootCardigan_v5b/fc-v5b.sublime-project"
+			],
+			[
+				"ke",
+				"~/Sites/KellyWynne/kelly-wynne.sublime-project"
+			],
+			[
+				"",
+				"~/Sites_rails/foot-cardigan-store/foot-cardigan-store.sublime-project"
+			],
+			[
+				"kell",
+				"~/Sites/KellyWynne/kelly-wynne.sublime-project"
+			],
+			[
+				"fot-",
+				"~/Sites_rails/foot-cardigan-store/foot-cardigan-store.sublime-project"
+			],
+			[
+				"foo",
+				"~/Sites_rails/foot-cardigan-store/foot-cardigan-store.sublime-project"
+			],
+			[
+				"castl",
+				"~/Sites/CastleHills/castle-hills.sublime-project"
+			],
+			[
+				"kel",
+				"~/Sites/KellyWynne/kelly-wynne.sublime-project"
+			],
+			[
+				"vim",
+				"~/Sites/Vim+Vigor/vim-vigor.sublime-project"
+			],
+			[
+				"eas",
+				"~/Sites/EastHampton/east-hampton.sublime-project"
+			],
+			[
+				"yank",
+				"~/Sites_rails/yankeyhotel/yankeyhotel.sublime-project"
+			],
+			[
+				"cast",
+				"~/Sites/CastleHills/castle-hills.sublime-project"
+			],
+			[
+				"brave",
+				"~/Sites/BraveLove/bravelove.sublime-project"
+			],
+			[
+				"geo",
+				"~/Sites/GeoTag/geotag.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 325.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
