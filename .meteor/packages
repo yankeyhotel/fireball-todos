@@ -10,3 +10,4 @@ nemo64:bootstrap
 less
 underscore
 momentjs:moment
+iron:router
