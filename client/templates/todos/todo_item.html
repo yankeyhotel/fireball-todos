@@ -1,7 +1,7 @@
 <template name="todoItem">
 	<div class="todo">
 		<div class="todo-content">
-			<p>{{title}} <span class="label label-info">Due on: {{duedate}}</span></p>
+			<p>{{title}} <span class="label label-info">{{dateFormat duedate}}</span></p>
 		</div>
 	</div>
 </template>
