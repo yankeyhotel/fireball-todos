@@ -8,16 +8,18 @@
 			<div id="left" class="col-sm-3">
 				<ul class="nav nav-pills nav-stacked">
 					{{> loginButtons}}
-					<li>
-						<a href="{{pathFor 'todosList'}}">
-							<span class="glyphicon glyphicon-inbox"></span> Inbox <span class="badge">4</span>
-						</a>
-					</li>
-					<li>
-						<a href="{{pathFor 'todoSubmit'}}">
-							<span class="glyphicon glyphicon-plus"></span> Add a Todo
-						</a>
-					</li>
+					{{#if currentUser}}
+						<li>
+							<a href="{{pathFor 'todosList'}}">
+								<span class="glyphicon glyphicon-inbox"></span> Inbox <span class="badge">4</span>
+							</a>
+						</li>
+						<li>
+							<a href="{{pathFor 'todoSubmit'}}">
+								<span class="glyphicon glyphicon-plus"></span> Add a Todo
+							</a>
+						</li>
+					{{/if}}
 				</ul>
 			</div>
 

@@ -7,8 +7,12 @@ Template.todoSubmit.events({
 			duedate: 	new Date( $(e.target).find('[name=duedate]').val() )
 		}
 
-		todo._id = Todos.insert(todo);
-		Router.go('todoPage', todo);
+		Meteor.call('todoInsert', todo, function(error, result){
+			// display error to the user
+			if (error) 
+				return alert(error.reason);
+			Router.go('todoPage', {_id: result._id});
+		});
 		
 	}
 })
