@@ -2,9 +2,9 @@
 	<div class="todo">
 		<div class="todo-content">
 			<p>
-				<a href="{{pathFor 'todoPage'}}"><span class="glyphicon glyphicon-pencil"></span></a>&emsp;
-				{{title}}
-				<span class="label label-info">{{dateFormat duedate}}</span>
+				{{#if ownTodo}}<a href="{{pathFor 'todoEdit'}}"><span class="glyphicon glyphicon-pencil"></span></a>&emsp;{{/if}}
+				<a href="{{pathFor 'todoPage'}}">{{title}}</a>
+				<span class="label label-info">{{displayFormat duedate}}</span>
 			</p>
 		</div>
 	</div>
