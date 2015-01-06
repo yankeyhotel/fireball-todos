@@ -1,16 +1,26 @@
 <template name="layout">	
 	<div class="container-fluid">
 
-		<div class="page-header">
-			<h1>Fireball To Dos <small>Don't worry <strong>Matt McClard</strong>, you got this!</small></h1>
-		</div>
+		{{> header}}
 
 		<div class="row">
+			
 			<div id="left" class="col-sm-3">
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="{{pathFor 'todosList'}}"><span class="glyphicon glyphicon-inbox"></span> Inbox <span class="badge">4</span></a></li>
+					{{> loginButtons}}
+					<li>
+						<a href="{{pathFor 'todosList'}}">
+							<span class="glyphicon glyphicon-inbox"></span> Inbox <span class="badge">4</span>
+						</a>
+					</li>
+					<li>
+						<a href="{{pathFor 'todoSubmit'}}">
+							<span class="glyphicon glyphicon-plus"></span> Add a Todo
+						</a>
+					</li>
 				</ul>
 			</div>
+
 			<div id="right" class="col-sm-9">
 				{{> yield}}
 			</div>
