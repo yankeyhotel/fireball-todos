@@ -1,3 +1,19 @@
+Template.todoSubmit.created = function() {
+	Session.set('todoSubmitErrors', {});
+}
+
+
+Template.todoSubmit.helpers({
+	errorMessage: function(field) {
+		return Session.get('todoSubmitErrors')[field];
+	},
+
+	errorClass: function(field) {
+		return !!Session.get('todoSubmitErrors')[field] ? 'has-error' : '';
+	}
+});
+
+
 Template.todoSubmit.events({
 	'submit form': function(e){
 		e.preventDefault();
@@ -7,15 +23,20 @@ Template.todoSubmit.events({
 			duedate: 	new Date( $(e.target).find('[name=duedate]').val() )
 		}
 
+		var errors = validateTodos(todo);
+		if (errors.title || errors.duedate)
+			return Session.set('todoSubmitErrors', errors);
+
 		Meteor.call('todoInsert', todo, function(error, result){
 			// display error to the user
-			if (error) 
-				return alert(error.reason);
+			if (error)
+				Errors.throw(error.reason);
+			
 			Router.go('todoPage', {_id: result._id});
 		});
 		
 	}
-})
+});
 
 
 Template.todoSubmit.rendered = function() {

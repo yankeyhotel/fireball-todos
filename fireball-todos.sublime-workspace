@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"todo",
+				"todoSubmitErrors"
+			],
+			[
+				"fiel",
+				"fieldNames	(?)"
+			],
+			[
+				"user",
+				"userId	Meteor: this.userId"
+			],
+			[
+				"loading",
+				"loadingTemplate"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
 				"mar",
 				"margin"
 			],
@@ -42,14 +66,6 @@
 			[
 				"text-",
 				"text-transform"
-			],
-			[
-				"font",
-				"font-weight"
-			],
-			[
-				"font-",
-				"font-weight"
 			],
 			[
 				"location",
@@ -176,26 +192,53 @@
 	"buffers":
 	[
 		{
-			"file": "client/templates/todos/todo_list.html",
+			"file": "client/templates/includes/errors.js",
 			"settings":
 			{
-				"buffer_size": 117,
+				"buffer_size": 217,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/templates/todos/todo_list.js",
+			"file": "client/templates/todos/todo_submit.html",
 			"settings":
 			{
-				"buffer_size": 235,
+				"buffer_size": 847,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/templates/todos/todo_item.html",
+			"file": "client/templates/todos/todo_submit.js",
 			"settings":
 			{
-				"buffer_size": 164,
+				"buffer_size": 1574,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/templates/todos/todo_edit.js",
+			"settings":
+			{
+				"buffer_size": 1833,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Todos = new Mongo.Collection('todos');\n\nTodos.allow({\n	update: function(userId, todo) { return ownsDocument(userId, todo); },\n	remove: function(userId, todo) { return ownsDocument(userId, todo); }\n});\n\nTodos.deny({\n	update: function(userId, todo, fieldNames, modifier) {\n		// may only edit the following fields\n		return ( _.without(fieldNames, 'title', 'duedate').length > 0 );\n	}\n});\n\nMeteor.methods({\n	todoInsert: function(todoAttributes){\n		\n		check(Meteor.userId(), String);\n		check(todoAttributes, {\n			title: String,\n			duedate: Date\n		});\n\n		var errors = validateTodos(todoAttributes);\n		if (errors.title || errors.duedate)\n			throw new Meteor.Error('invalid-post', \"You must set a title and due date for your ToDo\");\n\n		var user = Meteor.user();\n\n		var todo = _.extend(todoAttributes, {\n			userId: user._id,\n			author: user.username,\n			submitted: new Date()\n		});\n\n		var todoId = Todos.insert(todo);\n\n		return { \n			_id: todoId \n		};\n	\n	}\n});\n\nvalidateTodos = function (todo) {\n	var errors = {};\n	if (!todo.title)\n		errors.title = \"Please fill in a ToDo or no Fireball for you!\";\n	if (!todo.duedate)\n		errors.duedate =  \"Please fill in a Due Date or no Fireball for you!\";\n	return errors;\n}",
+			"file": "lib/collections/todos.js",
+			"file_size": 1189,
+			"file_write_time": 130650591580000000,
+			"settings":
+			{
+				"buffer_size": 1199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/templates/todos/todo_edit.html",
+			"settings":
+			{
+				"buffer_size": 928,
 				"line_ending": "Unix"
 			}
 		}
@@ -237,20 +280,71 @@
 	[
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/application",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server",
 		"/Users/yankeyhotel/Sites_meteor/microscope",
-		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/posts",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/stylesheets",
+		"/Users/yankeyhotel/Sites_meteor/microscope/lib",
+		"/Users/yankeyhotel/Sites_meteor/microscope/lib/collections",
+		"/Users/yankeyhotel/Sites_meteor/microscope/packages",
 		"/Users/yankeyhotel/Sites_meteor/microscope/server"
 	],
 	"file_history":
 	[
+		"/Users/yankeyhotel/Sites_meteor/microscope/lib/collections/posts.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/style.less",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/main.html",
-		"/Users/yankeyhotel/Sites_meteor/microscope/server/fixtures.js",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor/custom.bootstrap.json",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/application/layout.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_submit.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_edit.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections/todos.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/errors.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/errors.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/errors.js",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/stylesheets/styles.css",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/header.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server/fixtures.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/packages/yankeyhotel:errors/errors.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_item.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_item.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/router.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_edit.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/permissions.js",
+		"/Users/yankeyhotel/Sites_meteor/microscope/lib/permissions.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/spacebars.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todos_list.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todos_list.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/access_denied.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/application/not_found.html",
+		"/Users/yankeyhotel/Sites_meteor/microscope/lib/router.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_submit.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/config.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_page.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/loading.html",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/main.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/main.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server/publications.js",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/comments/comment_item.js",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/notifications/notifications.js",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/posts/post_item.js",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/posts/post_page.js",
+		"/Users/yankeyhotel/Sites_meteor/microscope/client/helpers/spacebars.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor/custom.bootstrap.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/components/a_component.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/sites/home.import.less",
+		"/Users/yankeyhotel/Sites_meteor/microscope/server/fixtures.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/posts/post_item.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/posts/posts_list.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/posts/posts_list.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_list.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_list.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todos_item.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor/custom.bootstrap.json",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/vendor/custom.bootstrap.mixins.import.less",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/vendor/custom.bootstrap.less",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/stylesheets/vendor/custom.bootstrap.json",
@@ -330,54 +424,11 @@
 		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/jquery.sidr.dark.less",
 		"/Users/yankeyhotel/Sites/Maggianos.com/config.codekit",
 		"/Users/yankeyhotel/Sites/Maggianos.com/justin-map.html",
-		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/expressionengine/config/config.php",
-		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/menu.group/appetizers.html",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/mixins-switch.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/mixins.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/bootstrap-style-guide.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/sitemap.xml",
-		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_footer.html",
-		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_header.html",
-		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap-select/README.md",
-		"/Users/yankeyhotel/Desktop/menus.xml",
-		"/Users/yankeyhotel/Sites/Maggianos.com-wires/Site/assets/less/styles.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/forms.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/css/bootstrap.css",
-		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap-select/bootstrap-select.min.css",
-		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/bootstrap.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/js/app.js",
-		"/Volumes/Data/Switch Server/05.Switch Marketing/Events/Concert Series/10 2014 Concert Series/02 Bethan/email-6 Reschedule/email.html",
-		"/Users/yankeyhotel/Desktop/front-end-test-master/answers.js",
-		"/Users/yankeyhotel/Desktop/front-end-test-master/index.html",
-		"/Users/yankeyhotel/Desktop/front-end-test-master/spec/SpecHelper.js",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/_settings.scss",
-		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/foundation/scss/foundation/components/_buttons.scss",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/app.scss",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/js/app.js",
-		"/Users/yankeyhotel/Sites/MaggianosF/Gruntfile.js",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/js/circletype.js",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/layouts/default.html",
-		"/Users/yankeyhotel/Sites/MaggianosF/dist/assets/js/all.js",
-		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/foundation/js/foundation.js",
-		"/Users/yankeyhotel/Sites/MaggianosF/.bowerrc",
-		"/Users/yankeyhotel/Sites/MaggianosF/package.json",
-		"/Users/yankeyhotel/Sites/MaggianosF/bower.json",
-		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/letteringjs/jquery.lettering.js",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/pages/foundation.html",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/pages/style-guide.html",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/styles-variables.scss",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/styles.scss",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/assets/scss/_mixins-switch.scss",
-		"/Users/yankeyhotel/Sites/MaggianosF/README.md",
-		"/Users/yankeyhotel/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/yankeyhotel/Library/Application Support/Sublime Text 3/Packages/User/SCSS/section-comment",
-		"/Users/yankeyhotel/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
-		"/Users/yankeyhotel/Sites/MaggianosF/src/pages/index.html",
-		"/Users/yankeyhotel/Sites/MaggianosF/bower_components/foundation/scss/foundation/components/_type.scss"
+		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/expressionengine/config/config.php"
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 54.0
 	},
 	"find_in_files":
 	{
@@ -391,6 +442,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"todoSubmitErrors",
+			"//",
+			"'new Date()'",
+			"new Date()",
 			"false",
 			"glen",
 			"@",
@@ -514,11 +569,7 @@
 			"dessert",
 			"Dessert",
 			"dessert",
-			"beverage",
-			"Beverage",
-			"dinner",
-			"Dinner",
-			"title"
+			"beverage"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -572,30 +623,113 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/templates/todos/todo_list.html",
+					"file": "client/templates/includes/errors.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 117,
+						"buffer_size": 217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								66,
-								66
+								217,
+								217
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/templates/todos/todo_submit.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								847,
+								847
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/templates/todos/todo_submit.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								533
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/templates/todos/todo_edit.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -605,25 +739,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "client/templates/todos/todo_list.js",
+					"buffer": 4,
+					"file": "lib/collections/todos.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 235,
+						"buffer_size": 1199,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								235,
-								235
+								385,
+								385
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -634,32 +767,31 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "client/templates/todos/todo_item.html",
+					"buffer": 5,
+					"file": "client/templates/todos/todo_edit.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 164,
+						"buffer_size": 928,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								731,
+								673
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -719,6 +851,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"ma",
+				"~/Sites/Maggianos.com/maggianos.sublime-project"
+			],
 			[
 				"mag",
 				"~/Sites/Maggianos.com/maggianos.sublime-project"
