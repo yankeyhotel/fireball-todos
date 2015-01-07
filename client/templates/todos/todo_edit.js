@@ -4,6 +4,10 @@ Template.todoEdit.created = function() {
 
 
 Template.todoEdit.helpers({
+	editDateFormat: function(date) {
+
+	},
+
 	errorMessage: function(field) {
 		return Session.get('todoEditErrors')[field];
 	},
@@ -67,5 +71,8 @@ Template.todoEdit.rendered = function() {
     	showToday: 		true,					// shows the today indicator
     	sideBySide: 	true, 					// show the date and time picker side by side
 	});
+
+	// set the due date to the current duedate
+	$("#duedate").data("DateTimePicker").setDate(this.data.duedate);
 
 }

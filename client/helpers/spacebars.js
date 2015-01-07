@@ -4,9 +4,3 @@ UI.registerHelper('displayFormat', function(date){
 	var string = date.toISOString();
 	return moment(string).calendar();
 });
-
-
-UI.registerHelper('formFormat', function(date) {
-	var string = date.toISOString();
-	return moment(string).format("MM/DD/YYYY HH:mm A");
-});
