@@ -18,7 +18,8 @@ if (Todos.find().count() === 0) {
 		userId: matt._id,
 		author: matt.profile.name,
 		submitted: new Date(now - 5 * 3600 * 1000),
-		duedate: new Date(now + 8 * 3600 * 1000)
+		duedate: new Date(now + 8 * 3600 * 1000),
+		commentCount: 3
 	});
 
 	Comments.insert({
@@ -51,7 +52,8 @@ if (Todos.find().count() === 0) {
 		userId: matt._id,
 		author: matt.profile.name,
 		submitted: new Date(now - 5 * 3600 * 1000),
-		duedate: new Date(now + 9 * 3600 * 1000)
+		duedate: new Date(now + 9 * 3600 * 1000),
+		commentCount: 0
 	});
 
 	Todos.insert({
@@ -59,7 +61,8 @@ if (Todos.find().count() === 0) {
 		userId: matt._id,
 		author: matt.profile.name,
 		submitted: new Date(now - 5 * 3600 * 1000),
-		duedate: new Date(now + 10 * 3600 * 1000)
+		duedate: new Date(now + 10 * 3600 * 1000),
+		commentCount: 0
 	});
 
 }
