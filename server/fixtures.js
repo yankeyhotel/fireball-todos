@@ -22,7 +22,7 @@ if (Todos.find().count() === 0) {
 	});
 
 	Comments.insert({
-		todoId: oneId;
+		todoId: oneId,
 		userId: matt._id,
 		author: matt.profile.name,
 		submitted: new Date(now - 4 * 3600 * 1000),
@@ -30,7 +30,7 @@ if (Todos.find().count() === 0) {
 	});
 
 	Comments.insert({
-		todoId: oneId;
+		todoId: oneId,
 		userId: kelsey._id,
 		author: kelsey.profile.name,
 		submitted: new Date(now - 3 * 3600 * 1000),
@@ -38,7 +38,7 @@ if (Todos.find().count() === 0) {
 	});
 
 	Comments.insert({
-		todoId: oneId;
+		todoId: oneId,
 		userId: matt._id,
 		author: matt.profile.name,
 		submitted: new Date(now - 2 * 3600 * 1000),

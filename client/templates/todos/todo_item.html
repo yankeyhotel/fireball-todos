@@ -5,6 +5,7 @@
 				{{#if ownTodo}}<a href="{{pathFor 'todoEdit'}}"><span class="glyphicon glyphicon-pencil"></span></a>&emsp;{{/if}}
 				<a href="{{pathFor 'todoPage'}}">{{title}}</a>
 				<span class="label label-info">{{displayFormat duedate}}</span>
+				<span class="label label-warning">{{commentsCount}} comments</span>
 			</p>
 		</div>
 	</div>
