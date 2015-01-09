@@ -4,10 +4,6 @@ Template.todoEdit.created = function() {
 
 
 Template.todoEdit.helpers({
-	editDateFormat: function(date) {
-
-	},
-
 	errorMessage: function(field) {
 		return Session.get('todoEditErrors')[field];
 	},
@@ -26,9 +22,9 @@ Template.todoEdit.events({
 		var currentTodoId = this._id;
 
 		var todoProperties = {
-			title: 		$(e.target).find('[name=title]').val(),
-			duedate: 	new Date( $(e.target).find('[name=duedate]').val() ),
-			description: $(e.target).find('[name=description]').val()
+			title: 			$(e.target).find('[name=title]').val(),
+			duedate: 		new Date( $(e.target).find('[name=duedate]').val() ),
+			description: 	$(e.target).find('[name=description]').val()
 		}
 
 		var errors = validateTodos(todoProperties);
