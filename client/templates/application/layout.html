@@ -1,35 +1,15 @@
-<template name="layout">	
-	<div class="container-fluid">
-
-		{{> header}}
-
-		{{> meteorErrors}}
-
-		<div class="row">
-			
-			<div id="left" class="col-sm-3">
-				<ul class="nav nav-pills nav-stacked">
-					{{> loginButtons}}
-					{{#if currentUser}}
-						<li class="">
-							<a href="{{pathFor 'todosList'}}">
-								<span class="glyphicon glyphicon-inbox"></span> Inbox <span class="badge">4</span>
-							</a>
-						</li>
-						<li class="dropdown">{{> notifications}}</li>
-						<li>
-							<a href="{{pathFor 'todoSubmit'}}">
-								<span class="glyphicon glyphicon-plus"></span> Add a Todo
-							</a>
-						</li>
-					{{/if}}
-				</ul>
-			</div>
-
-			<div id="right" class="col-sm-9">
-				{{> yield}}
-			</div>
-		</div>
+<template name="layout">
 	
+	{{> meteorErrors}}
+			
+	<div id="main-nav">
+		{{> mainNav}}
 	</div>
+
+	<div id="main-content-hldr">
+		<div id="main-content">
+			{{> yield}}
+		</div>
+	</div>
+
 </template>

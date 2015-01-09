@@ -1,15 +1,25 @@
 <template name="todoPage">
-	{{> todoItem}}
+	<div class="todo-page">
+		{{> todoItem}}
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">Description &amp; Comments</div>
 
-	<ul class="list-group">
-		{{#each comments}}
-			{{> commentItem}}
-		{{/each}}
-	</ul>
+			<div class="panel-body">
+				<p>{{description}}</p>
+			</div>
 
-	{{#if currentUser}}
-		{{> commentSubmit}}
-	{{else}}
-		<p>Please log in to leave a comment.</p>
-	{{/if}}
+			<ul class="list-group">
+				{{#each comments}}
+					{{> commentItem}}
+				{{/each}}
+			</ul>
+		</div>
+
+		{{#if currentUser}}
+			{{> commentSubmit}}
+		{{else}}
+			<p>Please log in to leave a comment.</p>
+		{{/if}}
+	</div>
 </template>

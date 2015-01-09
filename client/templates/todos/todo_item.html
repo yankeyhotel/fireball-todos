@@ -1,12 +1,21 @@
 <template name="todoItem">
-	<div class="todo">
-		<div class="todo-content">
-			<p>
-				{{#if ownTodo}}<a href="{{pathFor 'todoEdit'}}"><span class="glyphicon glyphicon-pencil"></span></a>&emsp;{{/if}}
-				<a href="{{pathFor 'todoPage'}}">{{title}}</a>
-				<span class="label label-info">{{displayFormat duedate}}</span>
-				<span class="label label-warning">{{commentCount}} comments</span>
-			</p>
+	<div class="todo-item">
+		
+		<div class="checkbox-hldr">
+			<input type="checkbox">
 		</div>
+
+		<div class="content">
+			<!-- <span class="glyphicon glyphicon-resize-vertical"></span> -->
+			<span class="title">
+				<a href="{{pathFor 'todoPage'}}">{{title}}</a>
+			</span>
+			<span class="meta">Due {{displayFormat duedate}} • {{commentCount}} comments</span>
+		</div>
+
+		<div class="extra">
+			<a href="{{pathFor 'todoEdit'}}" class="btn btn-off-white btn-sm">Edit</a>
+		</div>
+
 	</div>
 </template>

@@ -12,46 +12,31 @@
 @import "sites/home.import.less";
 
 
-// Type settings
-h1, h2, h3 { font-weight: 300; }
-
-
-// Basic styles
-body {
+// buttons
+.btn {
+	border-radius: 0;
 }
 
-.container-fluid {
-	max-width: 950px;
-}
-
-.page-header {
-	position: relative;
-
-	h1 small { font-size: 45%; }
-
-	#login-buttons {
-		position: absolute;
-			top: 0;
-			right: 0;
+.btn-off-white {
+	background-color: @off-white;
+	color: @gray;
+	&:hover {
+		background-color: @off-white-hover;
 	}
 }
 
-#left {
-	
+.btn-off-white-dark {
+	background-color: @off-white-hover;
+	color: @gray;
+	&:hover {
+		background-color: darken(@off-white-hover, 10%)
+	}
 }
 
-#right {
-	border-left: 1px solid @gray-lighter;
-}
-
-
-// Todo
-.todo-content {
-	.clearfix();
-	display: block;
-	padding: 5px 0;
-	position: relative;
-	.btn { float: right; }
+// form-control
+.form-control {
+	border-radius: 0;
+	height: 46px;
 }
 
 
@@ -128,3 +113,222 @@ body {
     margin-bottom: 5px;
     pointer-events: auto;
 }
+
+
+
+/* 
+ * ------------------------------------------------------- 
+ * Main Nav
+ * ------------------------------------------------------- 
+*/
+	#main-nav {
+		background-color: @off-white;
+		height: 100%;
+		position: fixed;
+			top: 0;
+			left: 0;
+		width: 240px;
+
+		.page-brand {
+			background-color: @gray;
+			color: @white;
+			padding: 50px 0;
+			text-align: center;
+
+			.glyphicon { 
+				color: @orange; 
+				font-size: 26px;
+			}
+			
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		.nav.nav-pills {
+			margin-top: 20px;
+			> li {
+				border-radius: 0;
+				position: relative;
+
+				> a {
+					border-radius: 0;
+					font-size: 20px;
+					font-weight: 200;
+					padding: 14px 20px;
+				
+					&:hover,
+					&:focus {
+						background-color: @off-white-hover;
+						color: @white;
+					}// &:hover
+
+				}// > a
+
+				.badge {
+					position: absolute !important;
+						top: 18px !important;
+						right: 20px;
+				}
+				
+				&.open > a {
+					background-color: @off-white-hover;
+					color: @white;
+				}
+
+				&#login-dropdown-list {
+					.dropdown-menu {
+						.box-shadow(none);
+						background-color: @white;
+						border: 4px solid @off-white-hover;
+						border-radius: 0;
+						margin-top: 0;
+						min-width: 240px;
+						padding: 10px 15px 15px;
+
+						> .btn {
+							border-radius: 0;
+							font-size: 16px;
+							font-weight: 600;
+
+							&.btn-default {
+								border-color: @off-white-hover !important;
+								color: @gray !important;
+								&:hover { background-color: @off-white; }
+							}
+							
+							&.btn-primary {
+								border: none !important;
+							}
+						}// > .btn
+
+					}// .dropdown-menu
+				}// &#login-dropdown-list
+				
+				&.dropdown {
+					.dropdown-menu {
+						.box-shadow(none);
+						background-color: @white;
+						border: 4px solid #e9eae3;
+						border-radius: 0;
+						margin-top: 0;
+						min-width: 240px;
+						padding: 10px 0 15px;
+
+						> li {
+							> a {
+								font-size: 12px;
+								font-weight: 600;
+								padding: 3px 20px;
+								&:hover {
+									background-color: @off-white;
+								}
+							}
+						}
+					}
+				}// &.dropdown
+
+			}// > li
+		}// .nav.nav-pills
+
+	}// #main-nav
+/* -------------------------------------------------------
+ * End Main Nav  
+ * ------------------------------------------------------- */
+
+
+
+ /* 
+  * ------------------------------------------------------- 
+  * Main Content
+  * ------------------------------------------------------- 
+ */
+ 	#main-content-hldr {
+ 		margin-left: 240px;
+
+ 		#main-content {
+ 			padding: 40px;
+ 			width: 100%;
+ 		}
+ 	}// #main-content
+ /* -------------------------------------------------------
+  * End Main Content  
+  * ------------------------------------------------------- */
+
+
+
+/* 
+ * ------------------------------------------------------- 
+ * Todo item
+ * ------------------------------------------------------- 
+*/
+	.todo-item {
+		&:first-of-type { border-top: 1px solid @off-white-hover; }
+		border-bottom: 1px solid @off-white-hover;
+		display: table;
+		padding: 10px 0;
+		position: relative;
+		width: 100%;
+		
+		.checkbox-hldr {
+			display: table-cell;
+			vertical-align: middle;
+			width: 24px;
+		}
+		
+		.content {
+			.title {
+				color: @orange;
+				font-size: 21px;
+				font-weight: 200;
+			}
+
+			.meta {
+				color: @gray;
+				font-size: 12px;
+			}
+		}
+
+		.extra {
+			position: absolute;
+				top: 50%;
+				right: 0;
+			.translate(0, -50%);
+		}
+
+
+	}// .todo-item
+/* -------------------------------------------------------
+ * End Todo item  
+ * ------------------------------------------------------- */
+
+
+
+/* 
+ * ------------------------------------------------------- 
+ * Todo Page
+ * ------------------------------------------------------- 
+*/
+	.todo-page {
+		.panel {
+			background-color: @off-white;
+			border-color: @off-white-hover;
+			margin: 20px 0;
+			.panel-heading { 
+				background-color: @off-white;
+				color: @gray;
+			}
+		}
+	}// .todo-page
+/* -------------------------------------------------------
+ * End Todo Page  
+ * ------------------------------------------------------- */
+
+
+
+
+
+
+
+
+

@@ -8,5 +8,5 @@ Meteor.publish('comments', function(todoId){
 });
 
 Meteor.publish('notifications', function() {
-	return Notification.find();
+	return Notifications.find();
 })

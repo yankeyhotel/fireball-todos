@@ -9,13 +9,13 @@ Template.notifications.helpers({
 
 
 Template.notificationItem.helpers({
-	notificationPostPath: function() {
+	notificationTodoPath: function() {
 		return Router.routes.todoPage.path({_id: this.todoId});
 	}
 });
 
 
-Template.notificationsItem.events({
+Template.notificationItem.events({
 	'click a': function() {
 		Notifications.update(this._id, {$set: {read: true} });
 	}

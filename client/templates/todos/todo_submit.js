@@ -20,7 +20,8 @@ Template.todoSubmit.events({
 
 		var todo = {
 			title: 		$(e.target).find('[name=title]').val(),
-			duedate: 	new Date( $(e.target).find('[name=duedate]').val() )
+			duedate: 	new Date( $(e.target).find('[name=duedate]').val() ),
+			description: $(e.target).find('[name=description]').val()
 		}
 
 		var errors = validateTodos(todo);
