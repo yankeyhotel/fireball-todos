@@ -15,4 +15,5 @@ accounts-password
 ian:accounts-ui-bootstrap-3
 tsega:bootstrap3-datetimepicker
 yankeyhotel:errors
-useraccounts:unstyled
+useraccounts:bootstrap
+alanning:roles

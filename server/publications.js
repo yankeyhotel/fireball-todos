@@ -9,4 +9,12 @@ Meteor.publish('comments', function(todoId){
 
 Meteor.publish('notifications', function() {
 	return Notifications.find();
-})
+});
+
+Meteor.publish('allUsers', function() {
+	return Meteor.users.find();
+});
+
+Meteor.publish(null, function (){ 
+  return Meteor.roles.find({});
+});

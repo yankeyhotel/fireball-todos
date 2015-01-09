@@ -1,0 +1,44 @@
+<template name="manageUsers">
+	<div class="manage-users">
+
+		<header>
+			<h1>Manage Roles</h1>
+		</header>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Username</th>
+					<th>Email</th>
+					<th>Roles</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each allUsers}}
+					<tr>
+						{{> manageUser}}
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+
+	</div>
+</template>
+
+
+<template name="manageUser">
+	<td>{{profile.name}}</td>
+	<td>{{username}}</td>
+	<td>{{emails.[0].address}}</td>
+	<td>
+		<select class="form-control">
+			<option>Please select one</option>
+			{{#each allRoles}}
+				<option>{{name}}</option>
+			{{/each}}
+		</select>
+
+		<button class="btn btn-off-white">Update</button>
+	</td>
+</template>
