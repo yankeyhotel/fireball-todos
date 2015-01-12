@@ -32,13 +32,12 @@
 	<td>{{username}}</td>
 	<td>{{emails.[0].address}}</td>
 	<td>
-		<select class="form-control">
-			<option>Please select one</option>
+		<select data-id="{{_id}}" class="user-roles form-control" multiple="multiple">
 			{{#each allRoles}}
-				<option>{{name}}</option>
+				<option value="{{name}}" selected={{isChecked name ..}}>{{deslug name}}</option>
 			{{/each}}
 		</select>
 
-		<button class="btn btn-off-white">Update</button>
+		<!-- <button class="btn btn-off-white">Update</button> -->
 	</td>
 </template>

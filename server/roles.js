@@ -9,7 +9,7 @@ Meteor.methods({
 	updateRoles: function (targetUserId, roles, group) {
 		var loggedInUser = Meteor.user()
 
-		if (!loggedInUser || !Roles.userIsInRole(loggedInUser, ['manage-users','support-staff'], group)) {
+		if (!loggedInUser || !Roles.userIsInRole(loggedInUser, ['super-admin'], group)) {
 			throw new Meteor.Error(403, "Access denied");
 		}
 
