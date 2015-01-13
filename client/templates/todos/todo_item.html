@@ -8,9 +8,10 @@
 		<div class="content">
 			<!-- <span class="glyphicon glyphicon-resize-vertical"></span> -->
 			<span class="title">
-				<a href="{{pathFor 'todoPage'}}">{{title}}</a>
+				<a href="{{pathFor 'todoPage'}}">{{title}}</a> / 
+				<a href="{{pathFor 'groupPage' _id=groupId }}" class="group">{{group}}</a>
 			</span>
-			<span class="meta">Due {{displayFormat duedate}} • {{commentCount}} comments</span>
+			<span class="meta">Due {{displayFormat duedate}} • {{commentCount}} Comments • Assigned by {{author}}</span>
 		</div>
 
 		<div class="extra">

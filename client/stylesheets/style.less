@@ -15,6 +15,11 @@
 @import "../plugins/bootstrap-multiselect/bootstrap-multiselect.import.less";
 
 
+a {
+	.transition(color .3s ease-out);
+	&:hover { text-decoration: none; }
+}
+
 // buttons
 .btn {
 	border-radius: 0;
@@ -310,7 +315,6 @@
 		&:first-of-type { border-top: 1px solid @off-white-hover; }
 		border-bottom: 1px solid @off-white-hover;
 		display: table;
-		padding: 10px 0;
 		position: relative;
 		width: 100%;
 		
@@ -321,11 +325,23 @@
 		}
 		
 		.content {
+			display: table-cell;
+			padding: 10px 0;
+			text-align: left;
+
 			.title {
-				color: @orange;
+				color: @off-white-hover;
 				font-size: 21px;
 				font-weight: 200;
-			}
+				a {
+					color: @orange;
+					&:hover { color: darken(@orange, 10%); }
+					&.group {
+						color: @off-white-hover;
+						&:hover { color: darken(@orange, 10%); }
+					}
+				}
+			}// .title
 
 			.meta {
 				color: @gray;
@@ -334,10 +350,10 @@
 		}
 
 		.extra {
-			position: absolute;
-				top: 50%;
-				right: 0;
-			.translate(0, -50%);
+			display: table-cell;
+			text-align: right;
+			vertical-align: middle;
+			width: 8%;
 		}
 
 
@@ -353,7 +369,8 @@
  * Todo Page
  * ------------------------------------------------------- 
 */
-	.todo-page {
+	.todo-page,
+	.group-page {
 		.panel {
 			background-color: @off-white;
 			border-color: @off-white-hover;

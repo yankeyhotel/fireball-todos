@@ -17,10 +17,13 @@ Template.commentSubmit.events({
 	'submit form': function(e, template) {
 		e.preventDefault();
 
+		// find what kind of page we are on
+		var pageType = window.location.pathname.split( '/' )[1];
+
 		var $body = $(e.target).find('[name=body]');
 		var comment = {
 			body: $body.val(),
-			todoId: template.data._id
+			pageId: template.data._id
 		};
 
 		var errors = {};
@@ -29,7 +32,7 @@ Template.commentSubmit.events({
 			return Session.set('commentSubmitErrors', errors);
 		}
 
-		Meteor.call('commentInsert', comment, function(error, commentId) {
+		Meteor.call('commentInsert', comment, pageType, function(error, commentId) {
 			if (error) {
 				throwError(error.reason);
 			} else {

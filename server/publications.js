@@ -4,7 +4,7 @@ Meteor.publish('todos', function(){
 
 Meteor.publish('comments', function(todoId){
 	check(todoId, String);
-	return Comments.find({ todoId: todoId });
+	return Comments.find({ pageId: todoId });
 });
 
 Meteor.publish('notifications', function() {

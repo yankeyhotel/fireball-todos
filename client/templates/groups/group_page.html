@@ -1,0 +1,27 @@
+<template name="groupPage">
+	<div class="group-page">
+	
+		{{> groupItem}}
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><strong>Description &amp; Comments</strong></div>
+
+			<div class="panel-body">
+				<p>{{description}}</p>
+			</div>
+
+			<ul class="list-group">
+				{{#each comments}}
+					{{> commentItem}}
+				{{/each}}
+			</ul>
+		</div>
+
+		{{#if currentUser}}
+			{{> commentSubmit}}
+		{{else}}
+			<p>Please log in to leave a comment.</p>
+		{{/if}}
+
+	</div>
+</template>
