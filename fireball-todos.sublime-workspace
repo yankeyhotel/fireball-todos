@@ -239,47 +239,31 @@
 			"file": "client/stylesheets/style.less",
 			"settings":
 			{
-				"buffer_size": 10698,
+				"buffer_size": 10788,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/stylesheets/vendor/custom.bootstrap.import.less",
+			"file": "server/fixtures.js",
 			"settings":
 			{
-				"buffer_size": 27136,
+				"buffer_size": 2300,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "lib/router.js",
+			"file": "client/templates/groups/group_item.html",
 			"settings":
 			{
-				"buffer_size": 2286,
+				"buffer_size": 76,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/roles.js",
+			"file": "client/templates/groups/groups_list.html",
 			"settings":
 			{
-				"buffer_size": 837,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/templates/accounts/manage_users.html",
-			"settings":
-			{
-				"buffer_size": 730,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/templates/accounts/manage_users.js",
-			"settings":
-			{
-				"buffer_size": 183,
+				"buffer_size": 79,
 				"line_ending": "Unix"
 			}
 		}
@@ -321,24 +305,41 @@
 	[
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/accounts",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/groups",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server"
 	],
 	"file_history":
 	[
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server/publications.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server/roles.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/router.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/groups/groups_list.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_item.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/groups/group_item.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/groups/groups_list.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/main_nav.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server/publications.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections/groups.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections/todos.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todos_list.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/accounts/manage_users.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/accounts/manage_users.html",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor/custom.bootstrap.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_submit.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/spacebars.js",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/sites/home.import.less",
+		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/components/a_component.import.less",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/accounts-config.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/.meteor/local/build/programs/server/packages/useraccounts_core.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/.meteor/packages",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/accounts/accounts_profile.html",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/notifications/notifications.html",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/main_nav.js",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/router.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/accounts/accounts_profile.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_page.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_item.js",
@@ -350,14 +351,9 @@
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/config.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/main.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/accounts_sign_in.html",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections/todos.js",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_item.html",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_page.html",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_submit.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todo_submit.html",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/vendor/custom.bootstrap.import.less",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/style.less",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/spacebars.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/comments/comment_submit.html",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/notifications/notifications.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/header.html",
@@ -368,7 +364,6 @@
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections/comments.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/lib/collections/notifications.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/server/fixtures.js",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/todos/todos_list.html",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/includes/errors.js",
 		"/Users/yankeyhotel/Sites_meteor/microscope/lib/collections/posts.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/helpers/errors.js",
@@ -385,8 +380,6 @@
 		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/posts/post_item.js",
 		"/Users/yankeyhotel/Sites_meteor/microscope/client/templates/posts/post_page.js",
 		"/Users/yankeyhotel/Sites_meteor/microscope/client/helpers/spacebars.js",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/components/a_component.import.less",
-		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/stylesheets/sites/home.import.less",
 		"/Users/yankeyhotel/Sites_meteor/microscope/server/fixtures.js",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/posts/post_item.html",
 		"/Users/yankeyhotel/Sites_meteor/fireball-todos/client/templates/posts/posts_list.js",
@@ -450,14 +443,7 @@
 		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/index.html",
 		"/Users/yankeyhotel/Sites/Maggianos.com/assets/xml/menu-tier-one.xml",
 		"/Users/yankeyhotel/Sites/Maggianos.com/assets/xml/MaggMenu.xml",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/xml/MaggMenu.json",
-		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/site.group/_location-finder.html",
-		"/Users/yankeyhotel/Sites/Maggianos.com/bower_components/bootstrap/less/glyphicons.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/switch_system/templates/default_site/delivery.group/index.html",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/php/eventbrite.php",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/css/3rd-party-survey.less",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/js/script-map.js",
-		"/Users/yankeyhotel/Sites/Maggianos.com/assets/less/variables.less"
+		"/Users/yankeyhotel/Sites/Maggianos.com/assets/xml/MaggMenu.json"
 	],
 	"find":
 	{
@@ -475,6 +461,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Meter",
+			"e",
 			"<option",
 			"with",
 			"select",
@@ -600,9 +588,7 @@
 			"RowType",
 			"Beverage",
 			"Lunch",
-			"Dinner",
-			"Featured",
-			" ID=\"featured\" "
+			"Dinner"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -656,7 +642,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -665,15 +651,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10698,
+						"buffer_size": 10788,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7910,
-								7910
+								220,
+								220
 							]
 						],
 						"settings":
@@ -681,7 +667,7 @@
 							"syntax": "Packages/LESS/LESS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6692.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -689,110 +675,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client/stylesheets/vendor/custom.bootstrap.import.less",
+					"file": "server/fixtures.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27136,
+						"buffer_size": 2300,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								544,
-								544
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "lib/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2286,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1266,
-								1266
+								436,
+								436
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 34.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "server/roles.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 837,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								802,
-								802
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/templates/accounts/manage_users.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 730,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								142,
-								142
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -802,25 +702,53 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "client/templates/accounts/manage_users.js",
+					"buffer": 2,
+					"file": "client/templates/groups/group_item.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 183,
+						"buffer_size": 76,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								175,
-								175
+								56,
+								56
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/templates/groups/groups_list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 79,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -887,12 +815,12 @@
 		"selected_items":
 		[
 			[
-				"fc",
-				"~/Sites/FootCardigan_v5b/fc-v5b.sublime-project"
-			],
-			[
 				"",
 				"~/Sites_meteor/fireball/fireball.sublime-project"
+			],
+			[
+				"fc",
+				"~/Sites/FootCardigan_v5b/fc-v5b.sublime-project"
 			],
 			[
 				"foo",

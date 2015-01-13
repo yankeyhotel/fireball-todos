@@ -17,7 +17,7 @@
 			<tbody>
 				{{#each allUsers}}
 					<tr>
-						{{> manageUser}}
+						{{> manageSingleUser}}
 					</tr>
 				{{/each}}
 			</tbody>
@@ -27,11 +27,11 @@
 </template>
 
 
-<template name="manageUser">
-	<td>{{profile.name}}</td>
-	<td>{{username}}</td>
-	<td>{{emails.[0].address}}</td>
-	<td>
+<template name="manageSingleUser">
+	<td class="name">{{profile.name}}</td>
+	<td class="username">{{username}}</td>
+	<td class="emails"><a href="mailto:{{emails.[0].address}}">{{emails.[0].address}}</a></td>
+	<td class="roles">
 		<select data-id="{{_id}}" class="user-roles form-control" multiple="multiple">
 			{{#each allRoles}}
 				<option value="{{name}}" selected={{isChecked name ..}}>{{deslug name}}</option>

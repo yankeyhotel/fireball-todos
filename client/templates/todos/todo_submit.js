@@ -10,6 +10,14 @@ Template.todoSubmit.helpers({
 
 	errorClass: function(field) {
 		return !!Session.get('todoSubmitErrors')[field] ? 'has-error' : '';
+	},
+
+	groups: function() {
+		return Groups.find();
+	},
+
+	allUsers: function() {
+		return Meteor.users.find({});
 	}
 });
 
@@ -19,9 +27,13 @@ Template.todoSubmit.events({
 		e.preventDefault();
 
 		var todo = {
-			title: 		$(e.target).find('[name=title]').val(),
-			duedate: 	new Date( $(e.target).find('[name=duedate]').val() ),
-			description: $(e.target).find('[name=description]').val()
+			title: 			$(e.target).find('[name=title]').val(),
+			duedate: 		new Date( $(e.target).find('[name=duedate]').val() ),
+			description: 	$(e.target).find('[name=description]').val(),
+			userId: 		$(e.target).find('#user-select').val(),
+			user: 			$(e.target).find('#user-select option:selected').text(),
+			groupId: 		$(e.target).find('#group-select').val(),
+			group: 			$(e.target).find('#group-select option:selected').text(),
 		}
 
 		var errors = validateTodos(todo);
@@ -53,6 +65,11 @@ Template.todoSubmit.rendered = function() {
     	minDate: 		moment().format('L'),	// set a minimum date
     	showToday: 		true,					// shows the today indicator
     	sideBySide: 	true, 					// show the date and time picker side by side
+	});
+
+	$('#group-select, #user-select').multiselect({
+		buttonClass: "btn btn-sm btn-off-white",
+		numberDisplayed: 1
 	});
 
 }

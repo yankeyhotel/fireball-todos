@@ -10,6 +10,22 @@ Template.todoEdit.helpers({
 
 	errorClass: function(field) {
 		return !!Session.get('todoEditErrors')[field] ? 'has-error' : '';
+	},
+
+	groups: function() {
+		return Groups.find();
+	},
+
+	allUsers: function() {
+		return Meteor.users.find({});
+	},
+
+	isCurrentUser: function(userId, todo) {
+		return userId === todo.userId;
+	},
+
+	isCurrentGroup: function(groupId, todo) {
+		return groupId === todo.groupId;
 	}
 });
 
@@ -24,7 +40,11 @@ Template.todoEdit.events({
 		var todoProperties = {
 			title: 			$(e.target).find('[name=title]').val(),
 			duedate: 		new Date( $(e.target).find('[name=duedate]').val() ),
-			description: 	$(e.target).find('[name=description]').val()
+			description: 	$(e.target).find('[name=description]').val(),
+			userId: 		$(e.target).find('#user-select').val(),
+			user: 			$(e.target).find('#user-select option:selected').text(),
+			groupId: 		$(e.target).find('#group-select').val(),
+			group: 			$(e.target).find('#group-select option:selected').text(),
 		}
 
 		var errors = validateTodos(todoProperties);
@@ -71,5 +91,10 @@ Template.todoEdit.rendered = function() {
 
 	// set the due date to the current duedate
 	$("#duedate").data("DateTimePicker").setDate(this.data.duedate);
+
+	$('#group-select, #user-select').multiselect({
+		buttonClass: "btn btn-sm btn-off-white",
+		numberDisplayed: 1
+	});
 
 }

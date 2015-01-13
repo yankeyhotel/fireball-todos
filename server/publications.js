@@ -4,7 +4,7 @@ Meteor.publish('todos', function(){
 
 Meteor.publish('comments', function(todoId){
 	check(todoId, String);
-	return Comments.find({todoId: todoId});
+	return Comments.find({ todoId: todoId });
 });
 
 Meteor.publish('notifications', function() {
@@ -12,9 +12,13 @@ Meteor.publish('notifications', function() {
 });
 
 Meteor.publish('allUsers', function() {
-	return Meteor.users.find();
+	return Meteor.users.find({});
 });
 
-Meteor.publish(null, function (){ 
-  return Meteor.roles.find({});
+Meteor.publish(null, function(){ 
+	return Meteor.roles.find();
 });
+
+Meteor.publish('groups', function(){
+	return Groups.find();
+})

@@ -21,37 +21,41 @@
 }
 
 .btn-off-white {
+	.transition(background-color .3s ease-out);
 	background-color: @off-white;
 	color: @gray;
-	.transition(background-color .3s ease-out);
 	&:hover {
 		background-color: @off-white-hover;
 	}
 }
 
 .btn-off-white-dark {
+	.transition(background-color .3s ease-out);
 	background-color: @off-white-hover;
 	color: @gray;
-	.transition(background-color .3s ease-out);
 	&:hover {
 		background-color: darken(@off-white-hover, 10%)
 	}
 }
 
 .btn-primary {
+	.transition(background-color .3s ease-out);
 	background-color: @orange;
 	border: none;
 	color: @white;
-	.transition(background-color .3s ease-out);
 	&:hover {
 		background-color: darken(@orange, 10%);
 	}
 }
 
-// form-control
-.form-control {
-	border-radius: 0;
-	height: 46px;
+.btn-danger {
+	.transition(background-color .3s ease-out);
+	background-color: @red;
+	border: none;
+	color: @white;
+	&:hover {
+		background-color: darken(@red, 10%);
+	}
 }
 
 
@@ -98,7 +102,7 @@
 		color: @orange;
 		font-size: 56px;
 		font-weight: 100;
-		margin-bottom: 20px;
+		margin-bottom: 60px;
 		text-align: center;
 	}// h1
 /* -------------------------------------------------------
@@ -173,12 +177,7 @@
 
 				&#login-dropdown-list {
 					.dropdown-menu {
-						.box-shadow(none);
-						background-color: @white;
-						border: 4px solid @off-white-hover;
-						border-radius: 0;
-						margin-top: 0;
-						min-width: 240px;
+						.dropdown-menu-default();
 						padding: 10px 15px 15px;
 
 						> .btn {
@@ -202,13 +201,7 @@
 				
 				&.dropdown {
 					.dropdown-menu {
-						.box-shadow(none);
-						background-color: @white;
-						border: 4px solid @off-white-hover;
-						border-radius: 0;
-						margin-top: 0;
-						min-width: 240px;
-						padding: 10px 0 15px;
+						.dropdown-menu-default();
 
 						> li {
 							> a {
@@ -312,7 +305,8 @@
  * Todo item
  * ------------------------------------------------------- 
 */
-	.todo-item {
+	.todo-item,
+	.group-item {
 		&:first-of-type { border-top: 1px solid @off-white-hover; }
 		border-bottom: 1px solid @off-white-hover;
 		display: table;
@@ -382,6 +376,53 @@
 
 /* 
  * ------------------------------------------------------- 
+ * Forms
+ * ------------------------------------------------------- 
+*/
+	.form-control {
+		border-radius: 0;
+		height: 46px;
+	}
+
+	.dropdown-menu-default {
+		.box-shadow(none);
+		background-color: @white;
+		border: 4px solid @off-white-hover;
+		border-radius: 0;
+		margin-top: 0;
+		min-width: 240px;
+		padding: 10px 0 15px;
+		> li {
+			font-size: 14px;
+		}
+	}
+
+	.select-group {
+		.clearfix();
+		label {
+			width: 150px;
+		}
+		.btn {
+			text-align: left;
+			width: 200px;
+			.caret {
+				float: right;
+				position: relative;
+					top: 8px;
+			}
+		}
+		.dropdown-menu {
+			width: 260px;
+		}
+	}
+/* -------------------------------------------------------
+ * End Forms  
+ * ------------------------------------------------------- */
+
+
+
+/* 
+ * ------------------------------------------------------- 
  * Profile
  * ------------------------------------------------------- 
 */
@@ -426,8 +467,31 @@
 	.manage-users {
 		.table {
 			td, th { vertical-align: middle; }
-		}
+			th {
+				background-color: @off-white;
+				color: @gray;
+				font-size: 13px;
+				font-weight: 200;
+				text-transform: uppercase;
+			}// th
+
+			td {
+				&.name {
+					color: @orange;
+					font-size: 18px;
+				}
+			}
+		}// .table
 	}// .manage-users
+
+	.multiselect.dropdown-toggle {
+		.box-shadow(none) !important;
+	}
+
+	.multiselect-container.dropdown-menu {
+		.dropdown-menu-default();
+		padding: 10px 0 15px;
+	}// .multiselect-container
 /* -------------------------------------------------------
  * End Manage Users  
  * ------------------------------------------------------- */

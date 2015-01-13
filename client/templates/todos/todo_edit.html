@@ -22,6 +22,28 @@
 			<textarea name="description" id="description" class="form-control" rows="5">{{description}}</textarea>
 		</div>
 		
+		<div class="form-group select-group">
+			<label for="group-select" class="control-label">Assign a Group</label>&emsp;
+			<select name="group-select" id="group-select">
+				<option value="">&ldquo;There can be only one.&rdquo;</option>
+				{{#each groups}}
+					<option value="{{_id}}" selected="{{isCurrentGroup _id ..}}">{{title}}</option>
+				{{/each}}
+			</select>
+		</div>
+
+		<div class="form-group select-group">
+			<label for="user-select" class="control-label">Assign a ToDo&rsquo;er</label>&emsp;
+			<select name="user-select" id="user-select">
+				<option value="">&ldquo;There can be only one.&rdquo;</option>
+				{{#each allUsers}}
+					<option value="{{_id}}" selected="{{isCurrentUser _id ..}}">{{profile.name}}</option>
+				{{/each}}
+			</select>
+		</div>
+		
+		<hr>
+
 		<div class="form-group">
 			<input type="submit" value="Submit" class="btn btn-primary"/>&emsp;<button class="btn btn-danger">Delete</button>&emsp;<a href="{{pathFor 'todoPage'}}" class="btn btn-off-white">Cancel</a>
 		</div>

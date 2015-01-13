@@ -1,3 +1,5 @@
 Template.todosList.helpers({
-	todos: Todos.find({}, {sort: {duedate: 1}})
+	todos: function() {
+		return Todos.find({userId: Meteor.userId()}, {sort: {duedate: 1}});
+	}
 });

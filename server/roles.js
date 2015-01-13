@@ -17,13 +17,3 @@ Meteor.methods({
 	}
 
 });
-
-// set me to admin
-// Roles.addUsersToRoles("Cwc9dRETuhxGrkpyW", ['super-admin', 'web-developer']);
-
-// create all other roles
-// Roles.createRole("web-developer");
-// Roles.createRole("designer");
-// Roles.createRole("project-manager");
-// Roles.createRole("admin");
-// Roles.createRole("management");

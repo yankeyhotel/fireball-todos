@@ -42,7 +42,7 @@ Template.manageUsers.events({
 
 
 // Manage a single user
-Template.manageUser.helpers({
+Template.manageSingleUser.helpers({
 	allRoles: function() {
 		return Roles.getAllRoles();
 	},
