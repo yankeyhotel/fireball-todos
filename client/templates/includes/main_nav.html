@@ -29,14 +29,27 @@
 
 			<li class="">
 				<a href="{{pathFor 'todosList'}}">
-					<span class="glyphicon glyphicon-inbox"></span> Inbox <span class="badge">4</span>
+					<span class="glyphicon glyphicon-inbox"></span> Inbox <span class="badge">{{currentUser.profile.todosCount}}</span>
 				</a>
 			</li>
 
-			<li class="">
-				<a href="{{pathFor 'groupsList'}}">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-th"></span> Groups
+					<b class="caret"></b>
 				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="{{pathFor 'groupsList'}}">
+							<span class="glyphicon glyphicon-th"></span> All Groups
+						</a>
+					</li>
+					<li>
+						<a href="{{pathFor 'groupSubmit'}}">
+							<span class="glyphicon glyphicon-plus"></span> Add a Group
+						</a>
+					</li>
+				</ul>
 			</li>
 			
 			{{> notifications}}

@@ -103,13 +103,24 @@ a {
  * Typical Header
  * ------------------------------------------------------- 
 */
-	header h1 {
-		color: @orange;
-		font-size: 56px;
-		font-weight: 100;
-		margin-bottom: 60px;
-		text-align: center;
-	}// h1
+	header {
+		padding: 20px 0 40px;
+		h1 {
+			color: @orange;
+			font-size: 56px;
+			font-weight: 100;
+			margin: 0 10px;
+			text-align: center;
+		}// h1
+
+		h2 {
+			color: @off-white-hover;
+			font-size: 20px;
+			font-weight: 300;
+			margin-top: 0;
+			text-align: center;
+		}
+	}
 /* -------------------------------------------------------
  * End Typical Header  
  * ------------------------------------------------------- */
@@ -366,7 +377,7 @@ a {
 
 /* 
  * ------------------------------------------------------- 
- * Todo Page
+ * Todo / Group Page
  * ------------------------------------------------------- 
 */
 	.todo-page,
@@ -374,7 +385,7 @@ a {
 		.panel {
 			background-color: @off-white;
 			border-color: @off-white-hover;
-			margin: 20px 0;
+			margin: 20px 0 20px;
 			.panel-heading { 
 				background-color: @off-white;
 				color: @gray;
@@ -385,6 +396,34 @@ a {
 			}// .panel-body
 		}
 	}// .todo-page
+	
+	.group-page {
+		.clearfix();
+
+		.group-todos { 
+			float: left;
+			margin-top: 30px; 
+			padding-right: 20px;
+			width: 50%;
+		}
+
+		.group-info {
+			float: right;
+			margin-top: 10px; 
+			padding-left: 20px;
+			width: 50%;
+		}
+
+		.todo-item {
+			.content {
+				.title { 
+					display: block; 
+					line-height: 1;
+				}
+				.group, .slash { display: none; }
+			}
+		}
+	}
 /* -------------------------------------------------------
  * End Todo Page  
  * ------------------------------------------------------- */

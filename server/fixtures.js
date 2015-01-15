@@ -6,7 +6,8 @@ if (Todos.find().count() === 0) {
 		email: 'yankeyhotel@gmail.com',
 		password: 'fattie77',
 		profile: { 
-			name: 'Matt McClard' 
+			name: 'Matt McClard',
+			todosCount: 3,
 		},
 		username: 'yankeyhotel'
 	});
@@ -16,7 +17,8 @@ if (Todos.find().count() === 0) {
 		email: 'kelsey@switch.is',
 		password: 'Switch123',
 		profile: { 
-			name: 'Kelsey Wiley' 
+			name: 'Kelsey Wiley',
+			todosCount: 0, 
 		},
 		username: 'wiley'
 	});
@@ -35,6 +37,28 @@ if (Todos.find().count() === 0) {
 	Roles.createRole("web-developer");
 
 
+	// create groups
+	var groupOneId = Groups.insert({
+		title: 'Jobs for Morning Time',
+		userId: matt._id,
+		author: matt.profile.name,
+		description: "Modo typi qui nunc nobis videntur parum clari fiant sollemnes in. Vel eum iriure dolor in hendrerit in vulputate.",
+		submitted: new Date(now - 5 * 3600 * 1000),
+		todosCount: 3,
+		commentCount: 0,
+	});
+
+	Groups.insert({
+		title: 'Switch Todos',
+		userId: kelsey._id,
+		author: kelsey.profile.name,
+		description: "Modo typi qui nunc nobis videntur parum clari fiant sollemnes in. Vel eum iriure dolor in hendrerit in vulputate.",
+		submitted: new Date(now - 5 * 3600 * 1000),
+		todosCount: 0,
+		commentCount: 0,
+	});
+
+
 	// create some Todos
 	var oneId = Todos.insert({
 		title: 'Create HTML',
@@ -42,6 +66,8 @@ if (Todos.find().count() === 0) {
 		author: matt.profile.name,
 		userId: matt._id,
 		user: matt.profile.name,
+		groupId: groupOneId,
+		group: 'Jobs for Morning Time',
 		submitted: new Date(now - 5 * 3600 * 1000),
 		duedate: new Date(now + 8 * 3600 * 1000),
 		description: "Est notare quam littera gothica quam nunc putamus parum claram. Per seacula quarta decima et quinta decima eodem modo? Nostrud exerci tation ullamcorper suscipit lobortis nisl ut. Est usus legentis in, iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere me!",
@@ -79,6 +105,8 @@ if (Todos.find().count() === 0) {
 		author: matt.profile.name,
 		userId: matt._id,
 		user: matt.profile.name,
+		groupId: groupOneId,
+		group: 'Jobs for Morning Time',
 		submitted: new Date(now - 5 * 3600 * 1000),
 		duedate: new Date(now + 9 * 3600 * 1000),
 		description: "Est notare quam littera gothica quam nunc putamus parum claram. Per seacula quarta decima et quinta decima eodem modo? Nostrud exerci tation ullamcorper suscipit lobortis nisl ut. Est usus legentis in, iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere me!",
@@ -91,31 +119,13 @@ if (Todos.find().count() === 0) {
 		author: matt.profile.name,
 		userId: matt._id,
 		user: matt.profile.name,
+		groupId: groupOneId,
+		group: 'Jobs for Morning Time',
 		submitted: new Date(now - 5 * 3600 * 1000),
 		duedate: new Date(now + 10 * 3600 * 1000),
 		description: "Est notare quam littera gothica quam nunc putamus parum claram. Per seacula quarta decima et quinta decima eodem modo? Nostrud exerci tation ullamcorper suscipit lobortis nisl ut. Est usus legentis in, iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere me!",
 		commentCount: 0
 	});
-
-
-	// create groups
-	Groups.insert({
-		title: 'Jobs for Morning Time',
-		userId: matt._id,
-		author: matt.profile.name,
-		submitted: new Date(now - 5 * 3600 * 1000),
-		todosCount: 0,
-		commentsCount: 0,
-	})
-
-	Groups.insert({
-		title: 'Switch Todos',
-		userId: kelsey._id,
-		author: kelsey.profile.name,
-		submitted: new Date(now - 5 * 3600 * 1000),
-		todosCount: 0,
-		commentsCount: 0,
-	})
 
 
 
