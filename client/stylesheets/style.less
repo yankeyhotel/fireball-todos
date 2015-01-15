@@ -23,6 +23,13 @@ a {
 // buttons
 .btn {
 	border-radius: 0;
+	&.disabled {
+		cursor: not-allowed;
+		pointer-events: auto;
+	}
+	&:focus {
+		outline: none !important;
+	}
 }
 
 .btn-off-white {
@@ -98,10 +105,10 @@ a {
 }
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Typical Header
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	header {
 		padding: 20px 0 40px;
@@ -122,14 +129,14 @@ a {
 		}
 	}
 /* -------------------------------------------------------
- * End Typical Header  
+ * End Typical Header
  * ------------------------------------------------------- */
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Main Nav
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	#main-nav {
 		background-color: @off-white;
@@ -145,11 +152,11 @@ a {
 			padding: 50px 0;
 			text-align: center;
 
-			.glyphicon { 
-				color: @orange; 
+			.glyphicon {
+				color: @orange;
 				font-size: 26px;
 			}
-			
+
 			p {
 				margin-bottom: 0;
 			}
@@ -168,9 +175,9 @@ a {
 					font-size: 20px;
 					font-weight: 200;
 					padding: 14px 20px;
-					
+
 					.glyphicon { color: @gray; }
-				
+
 					&:hover,
 					&:focus {
 						background-color: @off-white-hover;
@@ -185,7 +192,7 @@ a {
 						top: 18px !important;
 						right: 20px;
 				}
-				
+
 				&.open > a {
 					background-color: @off-white-hover;
 					color: @white;
@@ -206,7 +213,7 @@ a {
 								color: @gray !important;
 								&:hover { background-color: @off-white; }
 							}
-							
+
 							&.btn-primary {
 								border: none !important;
 							}
@@ -214,7 +221,7 @@ a {
 
 					}// .dropdown-menu
 				}// &#login-dropdown-list
-				
+
 				&.dropdown {
 					.dropdown-menu {
 						.dropdown-menu-default();
@@ -239,15 +246,15 @@ a {
 
 	}// #main-nav
 /* -------------------------------------------------------
- * End Main Nav  
+ * End Main Nav
  * ------------------------------------------------------- */
 
 
 
- /* 
-  * ------------------------------------------------------- 
+ /*
+  * -------------------------------------------------------
   * Main Content
-  * ------------------------------------------------------- 
+  * -------------------------------------------------------
  */
  	#main-content-hldr {
  		margin-left: 240px;
@@ -258,20 +265,20 @@ a {
  		}
  	}// #main-content
  /* -------------------------------------------------------
-  * End Main Content  
+  * End Main Content
   * ------------------------------------------------------- */
 
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Accounts Styles
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	.at-form {
 		margin: 0;
 		padding: 0;
-		
+
 		.at-title { margin-bottom: 26px; }
 
 		h3 {
@@ -283,7 +290,7 @@ a {
 		.submit {
 			.btn-primary();
 		}
-		
+
 		.has-success {
 			.control-label { color: @gray; }
 			.form-control { border-color: @off-white-hover; }
@@ -311,30 +318,37 @@ a {
 		text-align: left;
 	}
 /* -------------------------------------------------------
- * End Accounts Styles  
+ * End Accounts Styles
  * ------------------------------------------------------- */
 
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Todo item
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	.todo-item,
 	.group-item {
-		&:first-of-type { border-top: 1px solid @off-white-hover; }
+		.transition(background-color .3s ease-out);
 		border-bottom: 1px solid @off-white-hover;
 		display: table;
 		position: relative;
 		width: 100%;
-		
+
+		&:first-of-type { border-top: 1px solid @off-white-hover; }
+
+		&.checked-true {
+			background-color: @gray;
+			.content .meta { color: @off-white-hover; }
+		}
+
 		.checkbox-hldr {
 			display: table-cell;
 			vertical-align: middle;
 			width: 24px;
 		}
-		
+
 		.content {
 			display: table-cell;
 			padding: 10px 0;
@@ -367,18 +381,21 @@ a {
 			width: 8%;
 		}
 
-
 	}// .todo-item
+
+	.todo-item {
+		padding: 0 10px;
+	}
 /* -------------------------------------------------------
- * End Todo item  
+ * End Todo item
  * ------------------------------------------------------- */
 
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Todo / Group Page
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	.todo-page,
 	.group-page {
@@ -386,7 +403,7 @@ a {
 			background-color: @off-white;
 			border-color: @off-white-hover;
 			margin: 20px 0 20px;
-			.panel-heading { 
+			.panel-heading {
 				background-color: @off-white;
 				color: @gray;
 			}// .panel-heading
@@ -396,44 +413,53 @@ a {
 			}// .panel-body
 		}
 	}// .todo-page
-	
+
 	.group-page {
 		.clearfix();
 
-		.group-todos { 
+		.group-todos {
 			float: left;
-			margin-top: 30px; 
+			margin-top: 30px;
 			padding-right: 20px;
 			width: 50%;
 		}
 
 		.group-info {
 			float: right;
-			margin-top: 10px; 
+			margin-top: 10px;
 			padding-left: 20px;
 			width: 50%;
 		}
 
+		.todo-list {
+			margin-bottom: 20px;
+		}
+
 		.todo-item {
 			.content {
-				.title { 
-					display: block; 
+				.title {
+					display: block;
 					line-height: 1;
 				}
 				.group, .slash { display: none; }
 			}
+		}// .todo-item
+
+		form.main,
+		form.comment-form {
+			margin: 20px 0;
 		}
 	}
 /* -------------------------------------------------------
- * End Todo Page  
+ * End Todo Page
  * ------------------------------------------------------- */
 
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Forms
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	.form-control {
 		border-radius: 0;
@@ -472,18 +498,18 @@ a {
 		}
 	}
 /* -------------------------------------------------------
- * End Forms  
+ * End Forms
  * ------------------------------------------------------- */
 
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Profile
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	.profile {
-		
+
 		.profile-img {
 			margin: 0 auto;
 			max-width: 200px;
@@ -492,7 +518,7 @@ a {
 
 		.profile-header {
 			text-align: center;
-			
+
 			h1 {
 				color: @orange;
 				font-size: 56px;
@@ -504,21 +530,21 @@ a {
 					font-size: 18px;
 					font-weight: 400;
 				}// .username
-			
+
 			}// h1
 
-		}// .profile-header	
+		}// .profile-header
 
 	}// .profile
 /* -------------------------------------------------------
- * End Profile  
+ * End Profile
  * ------------------------------------------------------- */
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Manage Users
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 	.manage-users {
 		.table {
@@ -549,18 +575,18 @@ a {
 		padding: 10px 0 15px;
 	}// .multiselect-container
 /* -------------------------------------------------------
- * End Manage Users  
+ * End Manage Users
  * ------------------------------------------------------- */
 
 
 
-/* 
- * ------------------------------------------------------- 
+/*
+ * -------------------------------------------------------
  * Animations
- * ------------------------------------------------------- 
+ * -------------------------------------------------------
 */
 
-// Animate.css 
+// Animate.css
 // http://daneden.github.io/animate.css/
 
 	// .bounce
@@ -675,7 +701,7 @@ a {
 		-webkit-animation-name: @animation;
 		animation-name: @animation;
 	}
-	
+
 	// .alert {
 	// 	.animated();
 	// 	.animation-type(bounceInDown);
@@ -685,7 +711,7 @@ a {
 	// }
 
 /* -------------------------------------------------------
- * End Animations  
+ * End Animations
  * ------------------------------------------------------- */
 
 

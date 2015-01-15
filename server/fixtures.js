@@ -5,7 +5,7 @@ if (Todos.find().count() === 0) {
 	var mattId = Accounts.createUser({
 		email: 'yankeyhotel@gmail.com',
 		password: 'fattie77',
-		profile: { 
+		profile: {
 			name: 'Matt McClard',
 			todosCount: 3,
 		},
@@ -16,9 +16,9 @@ if (Todos.find().count() === 0) {
 	var kelseyId = Accounts.createUser({
 		email: 'kelsey@switch.is',
 		password: 'Switch123',
-		profile: { 
+		profile: {
 			name: 'Kelsey Wiley',
-			todosCount: 0, 
+			todosCount: 0,
 		},
 		username: 'wiley'
 	});
@@ -71,7 +71,8 @@ if (Todos.find().count() === 0) {
 		submitted: new Date(now - 5 * 3600 * 1000),
 		duedate: new Date(now + 8 * 3600 * 1000),
 		description: "Est notare quam littera gothica quam nunc putamus parum claram. Per seacula quarta decima et quinta decima eodem modo? Nostrud exerci tation ullamcorper suscipit lobortis nisl ut. Est usus legentis in, iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere me!",
-		commentCount: 3
+		commentCount: 3,
+		checked: false
 	});
 
 	Comments.insert({
@@ -110,7 +111,8 @@ if (Todos.find().count() === 0) {
 		submitted: new Date(now - 5 * 3600 * 1000),
 		duedate: new Date(now + 9 * 3600 * 1000),
 		description: "Est notare quam littera gothica quam nunc putamus parum claram. Per seacula quarta decima et quinta decima eodem modo? Nostrud exerci tation ullamcorper suscipit lobortis nisl ut. Est usus legentis in, iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere me!",
-		commentCount: 0
+		commentCount: 0,
+		checked: false
 	});
 
 	Todos.insert({
@@ -124,7 +126,8 @@ if (Todos.find().count() === 0) {
 		submitted: new Date(now - 5 * 3600 * 1000),
 		duedate: new Date(now + 10 * 3600 * 1000),
 		description: "Est notare quam littera gothica quam nunc putamus parum claram. Per seacula quarta decima et quinta decima eodem modo? Nostrud exerci tation ullamcorper suscipit lobortis nisl ut. Est usus legentis in, iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere me!",
-		commentCount: 0
+		commentCount: 0,
+		checked: false
 	});
 
 

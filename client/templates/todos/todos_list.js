@@ -1,5 +1,5 @@
 Template.todosList.helpers({
 	todos: function() {
-		return Todos.find({userId: Meteor.userId()}, {sort: {duedate: 1}});
+		return Todos.find({userId: Meteor.userId()}, {sort: {checked: false, duedate: 1}});
 	}
 });

@@ -3,6 +3,6 @@ Template.groupPage.helpers({
 		return Comments.find({pageId: this._id});
 	},
 	todos: function() {
-		return Todos.find({groupId: this._id});
+		return Todos.find({groupId: this._id}, {sort: {checked: false, duedate: 1}});
 	}
 })
