@@ -1,7 +1,7 @@
 <template name="todoPage">
 	<div class="todo-page">
 		{{> todoItem}}
-		
+
 		<div class="panel panel-default">
 			<div class="panel-heading"><strong>Description &amp; Comments</strong></div>
 
@@ -17,7 +17,8 @@
 		</div>
 
 		{{#if currentUser}}
-			{{> commentSubmit}}
+			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCommentSubmit" aria-expanded="false" aria-controls="collapseCommentSubmit">Add a Comment</button>
+			<div class="collapse" id="collapseCommentSubmit">{{> commentSubmit}}</div>
 		{{else}}
 			<p>Please log in to leave a comment.</p>
 		{{/if}}

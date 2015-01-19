@@ -9,3 +9,7 @@ UI.registerHelper('deslug', function(string){
 	// change case and remove dashes
 	return string.replace('-', ' ').replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 });
+
+UI.registerHelper('isItMe', function(string){
+	return (Meteor.user().profile.name === string) ? 'Me' : string;
+});

@@ -6,12 +6,18 @@
 		</div>
 
 		<div class="content">
-			<!-- <span class="glyphicon glyphicon-resize-vertical"></span> -->
+
 			<span class="title">
-				<a href="{{pathFor 'todoPage'}}">{{title}}</a> <span class="slash">/</span>
+				<a href="{{pathFor 'todoPage'}}">{{title}}</a>
+
+				<span class="slash-group">/</span>
 				<a href="{{pathFor 'groupPage' _id=groupId }}" class="group">{{group}}</a>
+
+				<span class="slash-user">/</span>
+				<a href="{{pathFor 'todosList'}}" class="user">{{isItMe user}}</a>
 			</span>
-			<span class="meta">{{displayFormat duedate}} • {{commentCount}} Comments • Assigned by {{author}}</span>
+
+			<span class="meta">{{displayFormat duedate}} • {{commentCount}} Comments • Created by {{isItMe author}}</span>
 		</div>
 
 		<div class="extra">

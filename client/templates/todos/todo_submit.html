@@ -1,11 +1,11 @@
 <template name="todoSubmit">
-	
+
 	<header>
 		<h1>Submit a Todo</h1>
 	</header>
 
 	<form action="" class="main form">
-		
+
 		<div class="form-group {{errorClass 'title'}}">
 			<label class="control-label" for="title">Title</label>
 			<div class="controls">
@@ -13,7 +13,7 @@
 				<span class="help-block">{{errorMessage 'title'}}</span>
 			</div>
 		</div>
-		
+
 		<div class="form-group {{errorClass 'duedate'}}">
 			<label for="duedate" class="control-label">Due Date</label>
 			<div class="controls">
@@ -28,7 +28,7 @@
 		</div>
 
 		<div class="form-group select-group">
-			<label for="group-select" class="control-label">Assign a Group</label>&emsp;
+			<label for="group-select" class="control-label"><i class="fa fa-tags"></i> Assign a Group</label>&emsp;
 			<select name="group-select" id="group-select">
 				<option value="">&ldquo;There can be only one.&rdquo;</option>
 				{{#each groups}}
@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="form-group select-group">
-			<label for="user-select" class="control-label">Assign a ToDo&rsquo;er</label>&emsp;
+			<label for="user-select" class="control-label"><i class="fa fa-user"></i> Assign a ToDo&rsquo;er</label>&emsp;
 			<select name="user-select" id="user-select">
 				<option value="">&ldquo;There can be only one.&rdquo;</option>
 				{{#each allUsers}}
@@ -46,7 +46,7 @@
 				{{/each}}
 			</select>
 		</div>
-		
+
 		<hr>
 
 		<div class="form-group">

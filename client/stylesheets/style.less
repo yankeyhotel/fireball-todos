@@ -185,13 +185,13 @@ a {
 						.glyphicon { color: @gray; }
 					}// &:hover
 
-				}// > a
+					> .badge {
+						position: absolute;
+							top: 18px;
+							right: 20px;
+					}
 
-				.badge {
-					position: absolute !important;
-						top: 18px !important;
-						right: 20px;
-				}
+				}// > a
 
 				&.open > a {
 					background-color: @off-white-hover;
@@ -235,7 +235,7 @@ a {
 								&:hover {
 									background-color: @off-white;
 								}
-								.glyphicon { color: @orange; }
+								.glyphicon, .fa { color: @orange; }
 							}
 						}// > li
 					}
@@ -361,7 +361,7 @@ a {
 				a {
 					color: @orange;
 					&:hover { color: darken(@orange, 10%); }
-					&.group {
+					&.group, &.user {
 						color: @off-white-hover;
 						&:hover { color: darken(@orange, 10%); }
 					}
@@ -386,6 +386,10 @@ a {
 	.todo-item {
 		padding: 0 10px;
 	}
+
+	.todos {
+		.user, .slash-user { display: none; }
+	}// .todo-list
 /* -------------------------------------------------------
  * End Todo item
  * ------------------------------------------------------- */
@@ -411,6 +415,10 @@ a {
 			.panel-body p {
 				white-space: pre-line;
 			}// .panel-body
+		}
+
+		form.comment-form {
+			margin: 20px 0;
 		}
 	}// .todo-page
 
@@ -441,7 +449,7 @@ a {
 					display: block;
 					line-height: 1;
 				}
-				.group, .slash { display: none; }
+				.group, .slash-group { display: none; }
 			}
 		}// .todo-item
 
@@ -483,6 +491,7 @@ a {
 		.clearfix();
 		label {
 			width: 150px;
+			&.project-managers { width: 230px; }
 		}
 		.btn {
 			text-align: left;
@@ -574,6 +583,94 @@ a {
 		.dropdown-menu-default();
 		padding: 10px 0 15px;
 	}// .multiselect-container
+/* -------------------------------------------------------
+ * End Manage Users
+ * ------------------------------------------------------- */
+
+
+
+/*
+ * -------------------------------------------------------
+ * Users
+ * -------------------------------------------------------
+*/
+	.users {
+		.user {
+			float: left;
+			padding: 20px;
+			width: 25%;
+
+			img {
+				max-width: 100%;
+			}
+
+			h2 {
+				color: @orange;
+				font-size: 34px;
+				font-weight: 300;
+				margin-bottom: 20px;
+				text-align: center;
+				span {
+					color: @gray;
+					display: block;
+					font-size: 16px;
+					text-transform: uppercase;
+				}
+			}
+
+			p {
+				text-align: center;
+			}
+		}
+	}
+/* -------------------------------------------------------
+ * End Manage Users
+ * ------------------------------------------------------- */
+
+
+ /*
+ * -------------------------------------------------------
+ * Users
+ * -------------------------------------------------------
+*/
+	.clients {
+		.client {
+			float: left;
+			padding: 20px;
+			width: 25%;
+
+			.profile-img {
+				position: relative;
+				.edit {
+					position: absolute;
+						top: 0;
+						right: 0;
+				}
+			}
+
+			img {
+				max-width: 100%;
+			}
+
+			h2 {
+				color: @orange;
+				font-size: 28px;
+				font-weight: 300;
+				margin-bottom: 20px;
+				text-align: center;
+				span {
+					color: @gray;
+					display: block;
+					font-size: 16px;
+					text-transform: uppercase;
+				}
+			}
+
+			p {
+				text-align: center;
+			}
+		}
+	}
 /* -------------------------------------------------------
  * End Manage Users
  * ------------------------------------------------------- */

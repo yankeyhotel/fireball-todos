@@ -11,14 +11,20 @@ Meteor.publish('notifications', function() {
 	return Notifications.find();
 });
 
+
 Meteor.publish('allUsers', function() {
 	return Meteor.users.find({});
 });
 
-Meteor.publish(null, function(){ 
+
+Meteor.publish(null, function(){
 	return Meteor.roles.find();
 });
 
 Meteor.publish('groups', function(){
 	return Groups.find();
 })
+
+Meteor.publish('clients', function(){
+	return Clients.find();
+});

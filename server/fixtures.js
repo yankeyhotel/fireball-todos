@@ -7,6 +7,7 @@ if (Todos.find().count() === 0) {
 		password: 'fattie77',
 		profile: {
 			name: 'Matt McClard',
+			avatar: '/uploads/profile-images/default.jpg',
 			todosCount: 3,
 		},
 		username: 'yankeyhotel'
@@ -18,6 +19,7 @@ if (Todos.find().count() === 0) {
 		password: 'Switch123',
 		profile: {
 			name: 'Kelsey Wiley',
+			avatar: '/uploads/profile-images/default.jpg',
 			todosCount: 0,
 		},
 		username: 'wiley'
@@ -37,6 +39,17 @@ if (Todos.find().count() === 0) {
 	Roles.createRole("web-developer");
 
 
+	// create clients
+	var clientOne = Clients.insert({
+		title: 'Switch Client',
+		logo: '/uploads/client-images/Square-01.jpg',
+		pmId: kelsey._id,
+		pm: kelsey.profile.name,
+		submitted: new Date(now - 5 * 3600 * 1000),
+		groupCount: 2
+	});
+
+
 	// create groups
 	var groupOneId = Groups.insert({
 		title: 'Jobs for Morning Time',
@@ -53,6 +66,7 @@ if (Todos.find().count() === 0) {
 		userId: kelsey._id,
 		author: kelsey.profile.name,
 		description: "Modo typi qui nunc nobis videntur parum clari fiant sollemnes in. Vel eum iriure dolor in hendrerit in vulputate.",
+		client: clientOne._id,
 		submitted: new Date(now - 5 * 3600 * 1000),
 		todosCount: 0,
 		commentCount: 0,

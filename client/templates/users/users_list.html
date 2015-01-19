@@ -1,0 +1,27 @@
+<template name="usersList">
+
+	<header>
+		<h1>Switcheroos</h1>
+	</header>
+
+	<div class="users">
+		{{#each users}}
+			{{> user}}
+		{{/each}}
+	</div>
+
+</template>
+
+
+<template name="user">
+	<div class="user">
+		<div class="profile-img">
+			<img src="{{profile.avatar}}" alt="{{profile.name}}" class="img-circle">
+		</div>
+
+		<div class="profile-header">
+			<h2>{{profile.name}} <span class="username">[a.k.a. {{username}}]</span></h2>
+			<p><a href="" class="btn btn-off-white">View Todos</a></p>
+		</div>
+	</div>
+</template>
